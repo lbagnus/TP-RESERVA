@@ -1,0 +1,22 @@
+package logica;
+import java.util.ArrayList;
+
+import logica.Usuario;
+
+
+public class Turista extends Usuario {
+	private int cantTrofeo;
+	private int[] cantReseña;
+	
+	public Turista(String nombre, String apellido, String sexo, String email, int numTelefono,ArrayList<Viaje> viajesRealizados, int cantTrofeo,int[] cantReseñas ) {
+		super(nombre, apellido, sexo, email, numTelefono, viajesRealizados);
+		this.cantReseña = cantReseña;
+		this.cantTrofeo = cantTrofeo;
+	}
+	
+	
+public void RegistrarUsuario() {
+	
+}
+
+}
