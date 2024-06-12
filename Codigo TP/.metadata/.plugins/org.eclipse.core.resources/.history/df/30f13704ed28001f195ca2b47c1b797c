@@ -1,0 +1,19 @@
+package ejecucion;
+import logica.*;
+import dtos.*;
+import controladores.*;
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		UsuarioDTO dtoUser = new UsuarioDTO();
+		UsuarioControlador controladorUser = new UsuarioControlador();
+		dtoUser.setApellido("Alonso");
+		dtoUser.setNombre("Pedro");
+		controladorUser.RegistrarUsuario(dtoUser, TipoUsuario.TURISTA, ModoRegistro.MAIL);
+		
+		
+		
+	}
+
+}

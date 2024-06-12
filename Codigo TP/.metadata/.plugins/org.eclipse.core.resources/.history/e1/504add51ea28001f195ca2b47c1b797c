@@ -1,0 +1,11 @@
+package logica;
+import controladores.*;
+public class IAdapter3Parties {
+	private Google google;
+	private Apple apple;
+	private Facebook facebook;
+
+	public void registrarUsuario(ModoRegistro modo) {
+		swit
+	}
+}

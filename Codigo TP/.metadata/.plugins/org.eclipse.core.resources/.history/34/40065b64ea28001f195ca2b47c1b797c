@@ -1,0 +1,8 @@
+package logica;
+
+public class Google {
+	public void registrarUsuarioGo() {
+		System.out.println("Se registro el usuario con Google");
+	}
+
+}

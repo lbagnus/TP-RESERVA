@@ -1,0 +1,31 @@
+package ejecucion;
+
+import logica.*;
+import dtos.*;
+import controladores.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        UsuarioDTO dtoUser = new UsuarioDTO();
+        UsuarioControlador controladorUser = new UsuarioControlador();
+        dtoUser.setApellido("Alonso");
+        dtoUser.setNombre("Tomas");
+        UsuarioDTO dtoUser2 = new UsuarioDTO();
+        dtoUser2.setApellido("Alonso");
+        dtoUser2.setNombre("Candela");
+
+        // controladorUser.RegistrarUsuario(dtoUser, TipoUsuario.TURISTA, ModoRegistro.MAIL);
+        // controladorUser.RegistrarUsuario(dtoUser2, TipoUsuario.TURISTA, ModoRegistro.MAIL);
+
+        // Asegúrate de que la lista usuarios no sea null
+        if (controladorUser.usuarios != null) {
+            for (Usuario elemento : controladorUser.usuarios) {
+                System.out.println(elemento);
+            }
+        } else {
+            System.out.println("La lista de usuarios está vacía o no ha sido inicializada.");
+        }
+    }
+}

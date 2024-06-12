@@ -1,50 +1,21 @@
 package logica;
 import java.util.ArrayList;
-
-import controladores.UsuarioControlador;
-import dtos.UsuarioDTO;
+import logica.Usuario;
 
 
 public class Turista extends Usuario {
 	private int cantTrofeo;
-	private int[] cantReseña; 
+	private int[] cantReseña =  new int[100];
 	
 	public Turista(String nombre, String apellido, String sexo, String email, int numTelefono,ArrayList<Viaje> viajesRealizados, int cantTrofeo,int[] cantReseñas ) {
 		super(nombre, apellido, sexo, email, numTelefono, viajesRealizados);
-		this.cantReseña =  new int[100];
-		this.cantTrofeo = cantTrofeo;
-	}
-	
-	
-	public Turista() {
-	super();}
-
-
-public int getCantTrofeo() {
-		return cantTrofeo;
-	}
-
-
-	public void setCantTrofeo(int cantTrofeo) {
-		this.cantTrofeo = cantTrofeo;
-	}
-
-
-	public int[] getCantReseña() {
-		return cantReseña;
-	}
-
-
-	public void setCantReseña(int[] cantReseña) {
 		this.cantReseña = cantReseña;
+		this.cantTrofeo = cantTrofeo;
 	}
-
-
-public void RegistrarUsuario(UsuarioDTO user) {
-	this.setApellido(user.getApellido());
-	this.setNombre(user.getNombre());
-	System.out.println("Se creo el nuevo Turista: " + this.getNombre()+ "  " + this.getApellido() + " tiene la siguiente cantidad de trofeos: " +  this.getCantTrofeo());
-	UsuarioControlador.usuarios.add(this);
+	
+	
+public void RegistrarUsuario(String nombre, String apellido) {
+	System.out.println("Se creo el nuevo Turista: " + nombre + apellido);
 }
 
 }

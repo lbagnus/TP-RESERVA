@@ -1,0 +1,75 @@
+package logica;
+import java.util.ArrayList;
+
+import controladores.UsuarioControlador;
+import dtos.UsuarioDTO;
+import logica.Usuario;
+
+public class Guia extends Usuario{
+	private String ciudad;
+	private String pais;
+	private static ArrayList<String> idiomas ;
+	private int cantTrofeo;
+	private float[] puntuacion; 
+	private ArrayList<Viaje> fechasOcupadas;
+	
+public Guia(String nombre, String apellido, String sexo, String email, int numTelefono,ArrayList<Viaje> viajesRealizados,String ciudad,String pais, ArrayList<String> idiomas, int cantTrofeo, float[] puntuacion,ArrayList<Viaje> fechasOcupadas) {
+	super(nombre, apellido, sexo, email, numTelefono, viajesRealizados);
+	this.ciudad = ciudad;
+	this.pais = pais;
+	this.idiomas = new ArrayList<String>();
+	this.cantTrofeo = cantTrofeo;
+	this.puntuacion  = new float[100];
+	this.fechasOcupadas = new ArrayList<Viaje>();
+}
+	public Guia() {
+		super();
+	}
+public String getCiudad() {
+	return ciudad;
+}
+public void setCiudad(String ciudad) {
+	this.ciudad = ciudad;
+}
+public String getPais() {
+	return pais;
+}
+public void setPais(String pais) {
+	this.pais = pais;
+}
+public static ArrayList<String> getIdiomas() {
+	return idiomas;
+}
+public static void setIdiomas(ArrayList<String> idiomas) {
+	Guia.idiomas = idiomas;
+}
+public int getCantTrofeo() {
+	return cantTrofeo;
+}
+public void setCantTrofeo(int cantTrofeo) {
+	this.cantTrofeo = cantTrofeo;
+}
+public float[] getPuntuacion() {
+	return puntuacion;
+}
+public void setPuntuacion(float[] puntuacion) {
+	this.puntuacion = puntuacion;
+}
+public ArrayList<Viaje> getFechasOcupadas() {
+	return fechasOcupadas;
+}
+public void setFechasOcupadas(ArrayList<Viaje> fechasOcupadas) {
+	this.fechasOcupadas = fechasOcupadas;
+}
+public void RegistrarUsuario(String nombre, String apellido) {
+	System.out.println("nuevo guia: " + nombre + apellido);
+	
+}
+
+public void RegistrarUsuario(UsuarioDTO user) {
+	this.setApellido(user.getApellido());
+	this.setNombre(user.getNombre());
+	System.out.println("Se creo el nuevo Guia: " + this.getNombre()+ "  " + this.getApellido());
+	UsuarioControlador.usuarios.add(this);
+}
+}
