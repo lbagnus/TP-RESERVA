@@ -1,5 +1,8 @@
 package logica;
 import java.util.ArrayList;
+
+import controladores.UsuarioControlador;
+import dtos.UsuarioDTO;
 import logica.Usuario;
 
 public class Guia extends Usuario{
@@ -19,8 +22,54 @@ public Guia(String nombre, String apellido, String sexo, String email, int numTe
 	this.puntuacion = puntuacion;
 	this.fechasOcupadas = fechasOcupadas;
 }
+	public Guia() {
+		super();
+	}
+public String getCiudad() {
+	return ciudad;
+}
+public void setCiudad(String ciudad) {
+	this.ciudad = ciudad;
+}
+public String getPais() {
+	return pais;
+}
+public void setPais(String pais) {
+	this.pais = pais;
+}
+public static ArrayList<String> getIdiomas() {
+	return idiomas;
+}
+public static void setIdiomas(ArrayList<String> idiomas) {
+	Guia.idiomas = idiomas;
+}
+public int getCantTrofeo() {
+	return cantTrofeo;
+}
+public void setCantTrofeo(int cantTrofeo) {
+	this.cantTrofeo = cantTrofeo;
+}
+public float[] getPuntuacion() {
+	return puntuacion;
+}
+public void setPuntuacion(float[] puntuacion) {
+	this.puntuacion = puntuacion;
+}
+public ArrayList<Viaje> getFechasOcupadas() {
+	return fechasOcupadas;
+}
+public void setFechasOcupadas(ArrayList<Viaje> fechasOcupadas) {
+	this.fechasOcupadas = fechasOcupadas;
+}
 public void RegistrarUsuario(String nombre, String apellido) {
 	System.out.println("nuevo guia: " + nombre + apellido);
 	
+}
+
+public void RegistrarUsuario(UsuarioDTO user) {
+	this.setApellido(user.getApellido());
+	this.setNombre(user.getNombre());
+	System.out.println("Se creo el nuevo Guia: " + this.getNombre()+ "  " + this.getApellido());
+	UsuarioControlador.usuarios.add(this);
 }
 }

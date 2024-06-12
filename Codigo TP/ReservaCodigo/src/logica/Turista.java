@@ -1,6 +1,8 @@
 package logica;
 import java.util.ArrayList;
-import logica.Usuario;
+
+import controladores.UsuarioControlador;
+import dtos.UsuarioDTO;
 
 
 public class Turista extends Usuario {
@@ -14,8 +16,35 @@ public class Turista extends Usuario {
 	}
 	
 	
-public void RegistrarUsuario(String nombre, String apellido) {
-	System.out.println("Se creo el nuevo Turista: " + nombre + apellido);
+	public Turista() {
+	super();}
+
+
+public int getCantTrofeo() {
+		return cantTrofeo;
+	}
+
+
+	public void setCantTrofeo(int cantTrofeo) {
+		this.cantTrofeo = cantTrofeo;
+	}
+
+
+	public int[] getCantReseña() {
+		return cantReseña;
+	}
+
+
+	public void setCantReseña(int[] cantReseña) {
+		this.cantReseña = cantReseña;
+	}
+
+
+public void RegistrarUsuario(UsuarioDTO user) {
+	this.setApellido(user.getApellido());
+	this.setNombre(user.getNombre());
+	System.out.println("Se creo el nuevo Turista: " + this.getNombre()+ "  " + this.getApellido());
+	UsuarioControlador.usuarios.add(this);
 }
 
 }

@@ -1,5 +1,6 @@
 package logica;
 import logica.Viaje;
+import dtos.UsuarioDTO;
 import java.util.*;
 
 public abstract class Usuario {
@@ -19,7 +20,59 @@ public abstract class Usuario {
 		this.viajesRealizados = viajesRealizados;
 	}
 	
-	public abstract void RegistrarUsuario(String nombre, String apellido); 
+	public Usuario() {}
+	
+	
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public String getApellido() {
+		return apellido;
+	}
+
+	public void setApellido(String apellido) {
+		this.apellido = apellido;
+	}
+
+	public String getSexo() {
+		return sexo;
+	}
+
+	public void setSexo(String sexo) {
+		this.sexo = sexo;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public int getNumTelefono() {
+		return numTelefono;
+	}
+
+	public void setNumTelefono(int numTelefono) {
+		this.numTelefono = numTelefono;
+	}
+
+	public ArrayList<Viaje> getViajesRealizados() {
+		return viajesRealizados;
+	}
+
+	public void setViajesRealizados(ArrayList<Viaje> viajesRealizados) {
+		this.viajesRealizados = viajesRealizados;
+	}
+
+	public abstract void RegistrarUsuario(UsuarioDTO user);
 }
+
 
 
