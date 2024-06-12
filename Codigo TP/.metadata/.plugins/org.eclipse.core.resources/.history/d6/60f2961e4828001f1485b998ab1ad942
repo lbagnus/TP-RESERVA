@@ -1,0 +1,13 @@
+package controladores;
+import java.util.*;
+import logica.*;
+import dtos.UsuarioDTO;
+
+public class UsuarioControlador {
+	private Usuario usuario;
+	public static List<Usuario> usuarios;
+	
+	public void RegistrarUsuario(UsuarioDTO user) {
+		usuario.RegistrarUsuario(user);
+	}
+}

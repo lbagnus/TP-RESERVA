@@ -1390,6 +1390,7 @@ org.eclipse.jdt.core.JavaModelException: adoo_clase_5_mvc_rest_dao does not exis
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+<<<<<<< HEAD
 2024-06-07 15:23:37,360 [main] ERROR o.e.m.j.u.i.DownloadSourcesActionDelegate - Could not schedule source download
 org.eclipse.jdt.core.JavaModelException: adoo_clase_5_mvc_rest_dao does not exist
 	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:584)
@@ -1463,3 +1464,7 @@ org.eclipse.jdt.core.JavaModelException: adoo_clase_5_mvc_rest_dao does not exis
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
 2024-06-12 14:30:06,876 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+=======
+2024-06-11 19:40:55,499 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+>>>>>>> 6af973143fb9c844c4200e25cf928c35fbcf0bad
+2024-06-12 14:33:26,345 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
